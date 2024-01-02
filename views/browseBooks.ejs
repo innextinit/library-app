@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Browse Available Books</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Browse Available Books</h1>
+      <div class="row">
+        <% books.forEach(book => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= book.title %></h5>
+              <p class="card-text">Author: <%= book.author %></p>
+              <p class="card-text">ISBN: <%= book.ISBN %></p>
+              <a href="/user/borrow/<%= book._id %>" class="btn btn-primary"
+                >Borrow</a
+              >
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

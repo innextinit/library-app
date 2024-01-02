@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Borrow Book</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Borrow Book</h1>
+      <form action="/user/borrow/<%= book._id %>" method="POST">
+        <input type="hidden" name="userId" value="<%= user._id %>" />
+        <button type="submit" class="btn btn-primary">Borrow Book</button>
+      </form>
+    </div>
+  </body>
+</html>
